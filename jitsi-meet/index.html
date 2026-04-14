@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jitsi Video Call</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Video Conference</h1>
+
+    <input type="text" id="roomName" placeholder="Masukkan nama room..." />
+    <button onclick="startCall()">Join Room</button>
+
+    <div id="video-container"></div>
+  </div>
+
+  <script src="https://meet.jit.si/external_api.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
