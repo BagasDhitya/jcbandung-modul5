@@ -1,0 +1,9 @@
+// Kita akan buat 2 fitur
+
+// 1. Scheduling (Cron Job)
+// - setiap 1 menit, akan melakukan: cek produk yang stock < 5
+// - setelah dicek, maka kita kirim ke queue
+
+// 2. Queue Job
+// - proses produk yang low stock
+// simulasi: log warning, (real case: kirim notifikasi ke email/proses restock)

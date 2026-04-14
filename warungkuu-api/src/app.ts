@@ -8,6 +8,9 @@ import { connectRedis } from "./config/redis";
 import { errorHandler } from "./middlewares/error.middleware";
 import { requestLogger } from "./middlewares/logger.middleware";
 
+import "./queues/product.processor"; // harus wajib import worker untuk menjalankan queuenya
+import { startLowStockJob } from "./jobs/lowStock.job"; // untuk schedulernya
+
 dotenv.config();
 
 const app = express();
@@ -24,6 +27,7 @@ const PORT = process.env.PORT || 5000;
 
 (async () => {
   await connectRedis();
+  startLowStockJob();
   app.listen(PORT, () => {
     console.log("Server running on http://localhost:" + PORT);
   });
