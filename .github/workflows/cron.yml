@@ -3,6 +3,7 @@ name: Low Stock Scheduler
 on:
   schedule:
     - cron: "* * * * *" # setiap 1 menit
+  workflow_dispatch: # ⬅️ ini penting
 
 jobs:
   hit-api:
