@@ -7,16 +7,6 @@ module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
   clearMocks: true,
-  reporters: [
-    "default",
-    [
-      "jest-sonar-reporter",
-      {
-        outputDirectory: "coverage",
-        outputName: "test-report.xml"
-      }
-    ]
-  ],
 
   collectCoverage: true,
   coverageDirectory: "coverage",
