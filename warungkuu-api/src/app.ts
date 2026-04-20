@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import productRoutes from "./routers/product.router";
 import logRoutes from "./routers/log.router";
 import jobRoutes from "./routers/job.router";
+import healthRoutes from "./routers/health.router";
+
 import { swaggerSpec } from "./docs/swagger";
 import swaggerUi from "swagger-ui-express";
 
@@ -25,6 +27,7 @@ app.use("/report", logRoutes);
 app.use(requestLogger);
 app.use("/products", productRoutes);
 app.use("/jobs", jobRoutes);
+app.use("/health", healthRoutes);
 
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
